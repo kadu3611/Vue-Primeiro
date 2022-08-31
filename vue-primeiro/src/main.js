@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
-Vue.config.productionTip = false
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.css'
 
 /* eslint-disable no-new */
 new Vue({
@@ -13,3 +13,12 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+Vue.use(VueMaterial)
+// definimos um tema padrão para nosso MD
+Vue.material.theme.register('default', {
+  primary: 'light-blue',
+  accent: 'pink'
+})
+
+Vue.config.productionTip = false
